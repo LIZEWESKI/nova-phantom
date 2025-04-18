@@ -1,12 +1,16 @@
-import React from "react"
-import { Button } from "@/components/ui/button"
-function App() {
-
+import React from 'react'
+import { RouterProvider,createBrowserRouter,createRoutesFromElements,Route } from 'react-router'
+import Layout from "./layouts/Layout"
+import Home from './pages/Home'
+const App = () => {
+  const router = createBrowserRouter(createRoutesFromElements(
+      <Route path='/' element={<Layout/>}>
+        <Route index element={<Home/>}/>
+        {/* <Route path='quiz' element={<Quiz/>} errorElement={<ErrorElement/>}/> */}
+      </Route>
+  ))
   return (
-    <>
-      <h1>TEST</h1>
-      <Button className="bg-destructive" variant="secondary">Testing Shadcn and tailwind!</Button>
-    </>
+    <RouterProvider router={router}/>
   )
 }
 
