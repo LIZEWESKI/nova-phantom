@@ -1,21 +1,22 @@
-import React from 'react'
-import { Outlet } from 'react-router'
-import { ThemeProvider } from "@/components/ThemeProvider"
+import React from "react";
+import { Outlet } from "react-router";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import Header from "@/components/header/header";
+import Footer from "@/components/footer/Footer";
 
 const Layout = () => {
   return (
-    <>
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-        <div className='flex flex-col h-screen w-full min-h-screen '>
-            {/* <header>This goes our little header</header> */}
-            {/* <main className='flex flex-col flex-grow'> */}
-                <Outlet/>
-            {/* </main> */}
-            {/* <footer>This goes our little footer</footer> */}
+        <div className="flex min-h-[100dvh] flex-col justify-center items-center">
+        <Header />
+        {/* <main className='flex flex-col flex-grow'> */}
+        <Outlet />
+        {/* </main> */}
+        <Footer />
         </div>
+     
     </ThemeProvider>
-    </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
