@@ -80,7 +80,7 @@ export default function Header() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="md:hidden absolute top-16 inset-x-0 bg-background/95 backdrop-blur-lg border-b"
+          className="md:hidden absolute top-12 inset-x-0 bg-background/95 backdrop-blur-lg border-b"
         >
           <div className="container py-4 flex flex-col gap-4 items-center">
           {navigation.map((link) => (
