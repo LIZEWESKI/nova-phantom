@@ -8,5 +8,11 @@
     "faq": "FAQ",
     "getStarted": "Get Started"
   },
-  "language": "Language"
+  "language": "Language",
+  "hero": {
+    "title": "Elevate Your Workflow with Nova Phantom",
+    "description": "The all-in-one platform that helps teams collaborate, automate, and deliver exceptional results. Streamline your processes and focus on what matters most.",
+    "GetToKnow": "Get to know us!",
+    "ourFeatures": "Our Features"
+  }
 }

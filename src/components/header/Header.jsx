@@ -47,10 +47,10 @@ export default function Header() {
       }`}
     >
       <div className="container flex items-center justify-between">
-        <div className="flex items-center gap-2 font-bold">
+        <a href="/" className="flex items-center gap-2 font-bold">
           <AppLogo />
           <span>{t("nav.brand")}</span>
-        </div>
+        </a>
         <nav className="hidden md:flex gap-8">
           {navigation.map((link) => (
             <a
