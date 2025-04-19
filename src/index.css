@@ -18,8 +18,8 @@
   border-radius: 20px;
 }
 ::selection {
-  color: var(--primary);
-  background: #042f2e ;
+  color: #000;
+  background: #2accb8 ;
 }
 
 @theme inline {

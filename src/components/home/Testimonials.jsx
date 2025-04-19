@@ -1,11 +1,44 @@
-import React from "react";
-import { Star } from "lucide-react";
-import { motion } from "framer-motion";
-import { Badge } from "../ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
-const Testimonials = () => {
+import { motion } from "framer-motion"
+import { Star, Quote } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
+import { Card, CardContent } from "@/components/ui/card"
+
+export default function TestimonialsSection() {
+  const testimonials = [
+    {
+      quote:
+        "They created exactly the website I wanted for my jewelry store. My online sales have increased by 40% since launching the new site!",
+      author: "Sarah Johnson",
+      role: "Owner, Elegant Gems Jewelry",
+      rating: 5,
+      image: "https://i.pravatar.cc/100?img=38",
+    },
+    {
+      quote:
+        "The website they built for my clothing boutique perfectly captures our brand. The mobile shopping experience is fantastic and our customers love it.",
+      author: "Michael Chen",
+      role: "Founder, Urban Style Clothing",
+      rating: 4, 
+      image: "https://i.pravatar.cc/100?img=52",
+    },
+    {
+      quote:
+        "The free maintenance has been a lifesaver. I can focus on running my shoe store while they keep my website updated and running smoothly.",
+      author: "Lisa Patel",
+      role: "Owner, Step Forward Footwear",
+      rating: 5,
+      image: "https://i.pravatar.cc/100?img=49",
+    },
+  ]
+
   return (
-    <section id="testimonials" className="w-full py-20 md:py-32">
+    <section id="testimonials" className="w-full py-12 md:py-20 relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+        <div className="absolute top-1/4 -left-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+      </div>
+
       <div className="container px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -14,95 +47,61 @@ const Testimonials = () => {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center justify-center space-y-4 text-center mb-12"
         >
-          <Badge
-            className="rounded-full px-4 py-1.5 text-sm font-medium"
-            variant="secondary"
-          >
+          <Badge className="rounded-full px-4 py-1.5 text-sm font-medium" variant="secondary">
             Testimonials
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-            Loved by Teams Worldwide
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Loved by Local Businesses</h2>
           <p className="max-w-[800px] text-muted-foreground md:text-lg">
-            Don't just take our word for it. See what our customers have to say
-            about their experience.
+            Don't just take our word for it. See what our clients have to say about their websites.
           </p>
         </motion.div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {[
-            {
-              quote:
-                "SaaSify has transformed how we manage our projects. The automation features have saved us countless hours of manual work.",
-              author: "Sarah Johnson",
-              role: "Project Manager, TechCorp",
-              rating: 5,
-            },
-            {
-              quote:
-                "The analytics dashboard provides insights we never had access to before. It's helped us make data-driven decisions that have improved our ROI.",
-              author: "Michael Chen",
-              role: "Marketing Director, GrowthLabs",
-              rating: 5,
-            },
-            {
-              quote:
-                "Customer support is exceptional. Any time we've had an issue, the team has been quick to respond and resolve it. Couldn't ask for better service.",
-              author: "Emily Rodriguez",
-              role: "Operations Lead, StartupX",
-              rating: 5,
-            },
-            {
-              quote:
-                "We've tried several similar solutions, but none compare to the ease of use and comprehensive features of SaaSify. It's been a game-changer.",
-              author: "David Kim",
-              role: "CEO, InnovateNow",
-              rating: 5,
-            },
-            {
-              quote:
-                "The collaboration tools have made remote work so much easier for our team. We're more productive than ever despite being spread across different time zones.",
-              author: "Lisa Patel",
-              role: "HR Director, RemoteFirst",
-              rating: 5,
-            },
-            {
-              quote:
-                "Implementation was seamless, and the ROI was almost immediate. We've reduced our operational costs by 30% since switching to SaaSify.",
-              author: "James Wilson",
-              role: "COO, ScaleUp Inc",
-              rating: 5,
-            },
-          ].map((testimonial, i) => (
+        <div className="grid gap-8 md:grid-cols-3">
+          {testimonials.map((testimonial, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.05 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="h-full"
             >
-              <Card className="h-full overflow-hidden border-border/40 bg-gradient-to-b from-background to-muted/10 backdrop-blur transition-all hover:shadow-md">
-                <CardContent className="p-6 flex flex-col h-full">
+              <Card className="h-full overflow-hidden border-border/40 bg-gradient-to-b from-background to-muted/10 backdrop-blur transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
+                <CardContent className="p-8 flex flex-col h-full">
+                  {/* Quote icon */}
+                  <div className="mb-4">
+                    <Quote className="size-10 text-primary/20" />
+                  </div>
+
+                  {/* Stars */}
                   <div className="flex mb-4">
-                    {Array(testimonial.rating)
+                    {Array(5)
                       .fill(0)
                       .map((_, j) => (
                         <Star
                           key={j}
-                          className="size-4 text-yellow-500 fill-yellow-500"
+                          className={`size-5 ${j < testimonial.rating ? "text-yellow-500 fill-yellow-500" : "text-muted stroke-muted fill-none"}`}
                         />
                       ))}
                   </div>
-                  <p className="text-lg mb-6 flex-grow">{testimonial.quote}</p>
+
+                  {/* Quote text */}
+                  <p className="text-lg mb-8 flex-grow italic">{testimonial.quote}</p>
+
+                  {/* Author info */}
                   <div className="flex items-center gap-4 mt-auto pt-4 border-t border-border/40">
-                    <div className="size-10 rounded-full bg-muted flex items-center justify-center text-foreground font-medium">
-                      {testimonial.author.charAt(0)}
+                    <div className="relative size-12 overflow-hidden rounded-full bg-muted">
+                      <img
+                        src={testimonial.image || "/placeholder.svg"}
+                        alt={testimonial.author}
+                        width={48}
+                        height={48}
+                        className="object-cover"
+                      />
                     </div>
                     <div>
                       <p className="font-medium">{testimonial.author}</p>
-                      <p className="text-sm text-muted-foreground">
-                        {testimonial.role}
-                      </p>
+                      <p className="text-sm text-muted-foreground">{testimonial.role}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -112,7 +111,5 @@ const Testimonials = () => {
         </div>
       </div>
     </section>
-  );
-};
-
-export default Testimonials;
+  )
+}

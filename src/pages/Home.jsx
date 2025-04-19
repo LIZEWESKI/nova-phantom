@@ -11,7 +11,7 @@ import ContactSection from "@/components/home/ContactSection";
 
 const Home = () => {
   return (
-    <div className="flex-1 w-full">
+    <div className="flex-1 w-full space-y-4">
       {/* Hero Section */}
       <HeroSection />
       {/* Logos Section */}
