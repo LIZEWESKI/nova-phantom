@@ -11,7 +11,7 @@ import ContactSection from "@/components/home/ContactSection";
 
 const Home = () => {
   return (
-    <main className="flex-1">
+    <div className="flex-1 w-full">
       {/* Hero Section */}
       <HeroSection />
       {/* Logos Section */}
@@ -34,7 +34,7 @@ const Home = () => {
       {/* CTA Section */}
       <CTASection />
       <ContactSection />
-    </main>
+    </div>
   );
 };
 

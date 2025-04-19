@@ -137,9 +137,12 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50 font-helvetica;
+    @apply border-border outline-ring/50 m-0 p-0 font-helvetica;
   }
   body {
-    @apply bg-background text-foreground font-helvetica;
+    @apply bg-background text-foreground font-helvetica h-screen;
+  }
+  #root {
+    @apply w-full h-full flex justify-center ;
   }
 }

@@ -9,7 +9,7 @@ const Layout = () => {
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <div className="h-screen w-full min-h-screen">
         <Header />
-        <main className='flex flex-col flex-grow'>
+        <main className='flex flex-col flex-grow w-full'>
           <Outlet />
         </main>
         <Footer />

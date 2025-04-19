@@ -1,9 +1,11 @@
-import React from 'react'
-
+import React from "react";
+import Logo from "@/assets/logo.png"; // Adjust the path as necessary
 const AppLogo = () => {
   return (
-    <div></div>
-  )
-}
+    <div className="w-4 h-auto">
+      <img src={Logo} alt="Logo" />
+    </div>
+  );
+};
 
-export default AppLogo
+export default AppLogo;
