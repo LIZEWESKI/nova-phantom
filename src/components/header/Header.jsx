@@ -78,7 +78,7 @@ export default function Header() {
             <span className="sr-only">Toggle theme</span>
           </Button>
           <a href="#contact">
-            <GlowingButton text={"Get Started"} />
+            <GlowingButton text={t("nav.getStarted")} />
           </a>
         </div>
         <div className="flex items-center gap-4 md:hidden">
@@ -129,7 +129,7 @@ export default function Header() {
             ))}
             <div className="flex flex-col gap-2 pt-2 border-t">
               <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
-                <GlowingButton text={"Get Started"} />
+                <GlowingButton text={t("nav.getStarted")} />
               </a>
             </div>
           </div>

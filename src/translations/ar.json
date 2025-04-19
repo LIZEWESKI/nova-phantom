@@ -3,8 +3,10 @@
     "brand": "Nova Phantom",
     "home": "الرئيسية",
     "features": "الميزات",
+    "testimonials": "آراء العملاء",
     "pricing": "التسعير",
-    "faq": "الأسئلة الشائعة"
+    "faq": "الأسئلة الشائعة",
+    "getStarted": "ابدأ الآن"
   },
   "language": "اللغة"
 }

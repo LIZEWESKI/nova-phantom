@@ -3,8 +3,10 @@
     "brand": "Nova Phantom",
     "home": "Accueil",
     "features": "Fonctionnalités",
+    "testimonials": "Témoignages",
     "pricing": "Tarification",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "getStarted": "Commencer"
   },
   "language": "Langue"
 }
