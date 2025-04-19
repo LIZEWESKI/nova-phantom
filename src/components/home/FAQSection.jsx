@@ -10,7 +10,7 @@ import {
 
 const FAQSection = () => {
   return (
-    <section id="faq" className="w-full py-20 md:py-32">
+    <section id="faq" className="w-full py-12 md:py-20">
       <div className="container px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -36,35 +36,35 @@ const FAQSection = () => {
           <Accordion type="single" collapsible className="w-full">
             {[
               {
-                question: "How does the 14-day free trial work?",
+                question: "Do I need any technical skills to get started?",
                 answer:
-                  "Our 14-day free trial gives you full access to all features of your selected plan. No credit card is required to sign up, and you can cancel at any time during the trial period with no obligation.",
+                  "Not at all! Just pick your plan, send your info via WhatsApp, and we’ll handle everything — from design to delivery.",
               },
               {
-                question: "Can I change plans later?",
+                question: "Where will my website be hosted?",
                 answer:
-                  "Yes, you can upgrade or downgrade your plan at any time. If you upgrade, the new pricing will be prorated for the remainder of your billing cycle. If you downgrade, the new pricing will take effect at the start of your next billing cycle.",
+                  "Your website will be hosted for free using modern static hosting platforms. No need to pay monthly hosting fees.",
               },
               {
-                question: "Is there a limit to how many users I can add?",
+                question: "How will customers place orders?",
                 answer:
-                  "The number of users depends on your plan. The Starter plan allows up to 5 team members, the Professional plan allows up to 20, and the Enterprise plan has no limit on team members.",
+                  "Each product will have a button that redirects to your WhatsApp with a pre-filled message — simple, fast, and personal.",
               },
               {
                 question:
-                  "Do you offer discounts for nonprofits or educational institutions?",
+                  "Can I update my products later?",
                 answer:
-                  "Yes, we offer special pricing for nonprofits, educational institutions, and open-source projects. Please contact our sales team for more information.",
+                  "Yes! Just message us on WhatsApp with the new details — we'll handle the updates based on your plan.",
               },
               {
-                question: "How secure is my data?",
+                question: "How long does it take to build the website?",
                 answer:
-                  "We take security very seriously. All data is encrypted both in transit and at rest. We use industry-standard security practices and regularly undergo security audits. Our platform is compliant with GDPR, CCPA, and other relevant regulations.",
+                  "Usually between 2 to 4 days, depending on your plan and how quickly you send the required info.",
               },
               {
-                question: "What kind of support do you offer?",
+                question: "What’s included in each plan?",
                 answer:
-                  "Support varies by plan. All plans include email support, with the Professional plan offering priority email support. The Enterprise plan includes 24/7 phone and email support. We also have an extensive knowledge base and community forum available to all users.",
+                  "Each plan includes different features, like the number of products, design customization, and update frequency. You’ll see full details when you choose a plan.",
               },
             ].map((faq, i) => (
               <motion.div

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function CTASection() {
   return (
-    <section className="w-full py-20 md:py-32 bg-card-foreground overflow-hidden">
+    <section className="w-full py-12 md:py-20 bg-card-foreground overflow-hidden">
       <div className="container px-4 md:px-6 ">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -35,7 +35,7 @@ export default function CTASection() {
             </a>
           </div>
           <p className="text-sm text-primary-foreground/80 mt-4">
-            No credit card required. Cancel anytime.
+            No credit card required.
           </p>
         </motion.div>
       </div>
