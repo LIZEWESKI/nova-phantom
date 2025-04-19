@@ -145,4 +145,7 @@
   #root {
     @apply w-full h-full flex justify-center ;
   }
+  section {
+    @apply flex justify-center items-center;
+  }
 }

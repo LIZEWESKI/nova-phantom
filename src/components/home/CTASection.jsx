@@ -1,6 +1,6 @@
-import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function CTASection() {
   return (
@@ -17,12 +17,16 @@ export default function CTASection() {
             Ready to Transform Your Workflow?
           </h2>
           <p className="mx-auto max-w-[700px] text-primary-foreground/80 md:text-xl">
-            Join thousands of satisfied customers who have streamlined their processes and boosted productivity with our
-            platform.
+            Join thousands of satisfied customers who have streamlined their
+            processes and boosted productivity with our platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
             <a href="#contact">
-              <Button size="lg" variant="secondary" className="relative rounded-full h-12 px-8 text-base">
+              <Button
+                size="lg"
+                variant="secondary"
+                className="relative rounded-full h-12 px-8 text-base"
+              >
                 <span className="relative z-20 flex items-center transition-transform duration-300 group-hover:scale-110">
                   Join us!
                   <ArrowRight className="ml-2 size-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:rotate-12" />
@@ -36,5 +40,5 @@ export default function CTASection() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

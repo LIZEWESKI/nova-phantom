@@ -1,6 +1,10 @@
 {
   "nav": {
-    "home": "Home"
+    "brand": "Nova Phantom",
+    "home": "Home",
+    "features": "Features",
+    "pricing": "Pricing",
+    "faq": "FAQ"
   },
   "language": "Language"
 }

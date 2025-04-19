@@ -7,17 +7,20 @@ import { useTheme } from "@/components/ThemeProvider";
 import GlowingButton from "../ui/GlowingButton";
 import AppLogo from "../AppLogo";
 import LanguageSwitcher from "../LanguageSwitcher";
+import { useTranslation } from "react-i18next"
 
 export default function Header() {
+  const { t } = useTranslation()
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+
   const navigation = [
-    { href: "#features", name: "Features" },
-    { href: "#testimonials", name: "Testimonials" },
-    { href: "#pricing", name: "Pricing" },
-    { href: "#faq", name: "FAQ" },
+    { href: "#features", name: t("nav.features") },
+    { href: "#testimonials", name: t("nav.testimonials") },
+    { href: "#pricing", name: t("nav.pricing") },
+    { href: "#faq", name: t("nav.faq") },
   ];
   useEffect(() => {
     setMounted(true);
@@ -46,7 +49,7 @@ export default function Header() {
       <div className="container flex items-center justify-between">
         <div className="flex items-center gap-2 font-bold">
           <AppLogo />
-          <span>Nova Phantom</span>
+          <span>{t("nav.brand")}</span>
         </div>
         <nav className="hidden md:flex gap-8">
           {navigation.map((link) => (

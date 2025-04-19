@@ -1,6 +1,10 @@
 {
   "nav": {
-    "home": "الرئيسية"
+    "brand": "Nova Phantom",
+    "home": "الرئيسية",
+    "features": "الميزات",
+    "pricing": "التسعير",
+    "faq": "الأسئلة الشائعة"
   },
   "language": "اللغة"
 }
