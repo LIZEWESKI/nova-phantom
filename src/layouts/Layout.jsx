@@ -7,11 +7,11 @@ import Footer from "@/components/footer/Footer";
 const Layout = () => {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-        <div className="flex min-h-[100dvh] flex-col justify-center items-center">
+        <div className="h-screen w-full min-h-screen">
         <Header />
-        {/* <main className='flex flex-col flex-grow'> */}
-        <Outlet />
-        {/* </main> */}
+        <main className='flex flex-col flex-grow'>
+          <Outlet />
+        </main>
         <Footer />
         </div>
      

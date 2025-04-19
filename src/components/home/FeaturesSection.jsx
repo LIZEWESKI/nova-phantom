@@ -31,32 +31,32 @@ const FeaturesSection = () => {
         {
           title: "Smart Automation",
           description: "Automate repetitive tasks and workflows to save time and reduce errors.",
-          icon: <Zap className="size-5" />,
+          icon: <Zap className="size-5 text-success" />,
         },
         {
           title: "Advanced Analytics",
           description: "Gain valuable insights with real-time data visualization and reporting.",
-          icon: <BarChart className="size-5" />,
+          icon: <BarChart className="size-5 text-success" />,
         },
         {
           title: "Team Collaboration",
           description: "Work together seamlessly with integrated communication tools.",
-          icon: <Users className="size-5" />,
+          icon: <Users className="size-5 text-success" />,
         },
         {
           title: "Enterprise Security",
           description: "Keep your data safe with end-to-end encryption and compliance features.",
-          icon: <Shield className="size-5" />,
+          icon: <Shield className="size-5 text-success" />,
         },
         {
           title: "Seamless Integration",
           description: "Connect with your favorite tools through our extensive API ecosystem.",
-          icon: <Layers className="size-5" />,
+          icon: <Layers className="size-5 text-success" />,
         },
         {
           title: "24/7 Support",
           description: "Get help whenever you need it with our dedicated support team.",
-          icon: <Star className="size-5" />,
+          icon: <Star className="size-5 text-success" />,
         },
       ]
   return (

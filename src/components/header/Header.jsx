@@ -1,116 +1,75 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router";
-import { Button } from "../ui/button";
-import { useTheme } from "@/components/ThemeProvider";
-import { ChevronRight, Menu, X, Moon, Sun } from "lucide-react";
-const header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+import { useState, useEffect } from "react"
+import { Link } from "react-router"
+import { motion } from "framer-motion"
+import { Menu, X, Moon, Sun } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { useTheme } from "@/components/ThemeProvider"
+import GlowingButton from "../ui/GlowingButton"
+import AppLogo from "../AppLogo"
+
+export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+  const navigation = [
+    {href: "#features", name:"Features"},
+    {href: "#testimonials", name:"Testimonials"},
+    {href: "#pricing", name:"Pricing"},
+    {href: "#faq", name:"FAQ"},
+  ]
   useEffect(() => {
-    setMounted(true);
+    setMounted(true)
     const handleScroll = () => {
       if (window.scrollY > 10) {
-        setIsScrolled(true);
+        setIsScrolled(true)
       } else {
-        setIsScrolled(false);
+        setIsScrolled(false)
       }
-    };
+    }
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
+    setTheme(theme === "dark" ? "light" : "dark")
+  }
+
   return (
     <header
-      className={`sticky top-0 z-50 w-full backdrop-blur-lg transition-all duration-300 flex justify-center ${
-        isScrolled ? "bg-background/80 shadow-sm" : "bg-transparent"
-      }`}
+      className={`fixed top-0 z-50 border-b-[1px] px-6 md:px-20 py-2 w-full backdrop-blur-lg transition-all duration-300 ${isScrolled ? "bg-background/80 shadow-sm" : "bg-transparent"}`}
     >
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container flex items-center justify-between">
         <div className="flex items-center gap-2 font-bold">
-          <div className="size-8 rounded-lg bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-primary-foreground">
-            S
-          </div>
-          <span>SaaSify</span>
+          <AppLogo/>
+          <span>Nova Phantom</span>
         </div>
         <nav className="hidden md:flex gap-8">
-          <Link
-            to="#features"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Features
-          </Link>
-          <Link
-            to="#testimonials"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Testimonials
-          </Link>
-          <Link
-            to="#pricing"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Pricing
-          </Link>
-          <Link
-            to="#faq"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-          >
-            FAQ
-          </Link>
+          {navigation.map((link) => (
+            <a key={link.name}
+              href={link.href}
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              {link.name}
+            </a>
+          ))}
         </nav>
         <div className="hidden md:flex gap-4 items-center">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleTheme}
-            className="rounded-full"
-          >
-            {mounted && theme === "dark" ? (
-              <Sun className="size-[18px]" />
-            ) : (
-              <Moon className="size-[18px]" />
-            )}
+          <Button variant="ghost" size="icon" onClick={toggleTheme} className="rounded-full">
+            {mounted && theme === "dark" ? <Sun className="size-[18px]" /> : <Moon className="size-[18px]" />}
             <span className="sr-only">Toggle theme</span>
           </Button>
-          <Link
-            href="#"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Log in
-          </Link>
-          <Button className="rounded-full">
-            Get Started
-            <ChevronRight className="ml-1 size-4" />
-          </Button>
+          <a href="#contact">
+            <GlowingButton text={"Get Started"} />
+          </a>
         </div>
         <div className="flex items-center gap-4 md:hidden">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleTheme}
-            className="rounded-full"
-          >
-            {mounted && theme === "dark" ? (
-              <Sun className="size-[18px]" />
-            ) : (
-              <Moon className="size-[18px]" />
-            )}
+          <Button variant="ghost" size="icon" onClick={toggleTheme} className="rounded-full">
+            {mounted && theme === "dark" ? <Sun className="size-[18px]" /> : <Moon className="size-[18px]" />}
           </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? (
-              <X className="size-5" />
-            ) : (
-              <Menu className="size-5" />
-            )}
+          <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            {mobileMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
             <span className="sr-only">Toggle menu</span>
           </Button>
         </div>
@@ -123,53 +82,24 @@ const header = () => {
           exit={{ opacity: 0, y: -20 }}
           className="md:hidden absolute top-16 inset-x-0 bg-background/95 backdrop-blur-lg border-b"
         >
-          <div className="container py-4 flex flex-col gap-4">
-            <Link
-              href="#features"
-              className="py-2 text-sm font-medium"
+          <div className="container py-4 flex flex-col gap-4 items-center">
+          {navigation.map((link) => (
+            <a key={link.name}
+              href={link.href}
               onClick={() => setMobileMenuOpen(false)}
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
-              Features
-            </Link>
-            <Link
-              href="#testimonials"
-              className="py-2 text-sm font-medium"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Testimonials
-            </Link>
-            <Link
-              href="#pricing"
-              className="py-2 text-sm font-medium"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Pricing
-            </Link>
-            <Link
-              href="#faq"
-              className="py-2 text-sm font-medium"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              FAQ
-            </Link>
+              {link.name}
+            </a>
+          ))}
             <div className="flex flex-col gap-2 pt-2 border-t">
-              <Link
-                href="#"
-                className="py-2 text-sm font-medium"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Log in
-              </Link>
-              <Button className="rounded-full">
-                Get Started
-                <ChevronRight className="ml-1 size-4" />
-              </Button>
+            <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
+              <GlowingButton text={"Get Started"} />
+            </a>
             </div>
           </div>
         </motion.div>
       )}
     </header>
-  );
-};
-
-export default header;
+  )
+}

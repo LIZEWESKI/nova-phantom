@@ -7,6 +7,7 @@ import Testimonials from "@/components/home/Testimonials";
 import PricingSection from "@/components/home/PricingSection";
 import FAQSection from "@/components/home/FAQSection";
 import CTASection from "@/components/home/CTASection";
+import ContactSection from "@/components/home/ContactSection";
 
 const Home = () => {
   return (
@@ -32,6 +33,7 @@ const Home = () => {
 
       {/* CTA Section */}
       <CTASection />
+      <ContactSection />
     </main>
   );
 };
