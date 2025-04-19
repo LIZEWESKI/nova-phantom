@@ -36,21 +36,21 @@ const WorksSection = () => {
           {[
             {
               step: "01",
-              title: "Create Account",
+              title: "Choose Your Plan",
               description:
-                "Sign up in seconds with just your email. No credit card required to get started.",
+                "Pick the package that fits your needs — Basic, Standard, or Premium. Each one includes a quick WhatsApp link to get started instantly.",
             },
             {
               step: "02",
-              title: "Configure Workspace",
+              title: "Send Us Your Brand & Product Info",
               description:
-                "Customize your workspace to match your team's unique workflow and requirements.",
+                "Share your brand name, the type of website you want, and the products you'd like to showcase — we’ll take care of the rest.",
             },
             {
               step: "03",
-              title: "Boost Productivity",
+              title: "Pay & Go Live",
               description:
-                "Start using our powerful features to streamline processes and achieve your goals.",
+                "Once everything’s ready, you’ll receive a preview of your site. Approve, pay, and your new storefront is live and ready to share.",
             },
           ].map((step, i) => (
             <motion.div

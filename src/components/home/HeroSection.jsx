@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Check, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const HeroSection = () => {
@@ -15,12 +15,10 @@ export const HeroSection = () => {
           className="text-center w-full max-w-3xl mx-auto mb-12"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mt-12 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
-            Elevate Your Workflow with Nova Phantom
+          Give Your Shop a Digital Front Door with Nova Phantom
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            The all-in-one platform that helps teams collaborate, automate, and
-            deliver exceptional results. Streamline your processes and focus on
-            what matters most.
+          Create a clean, modern website for your store — no backend, no monthly hosting. Let your customers browse your products and order directly through WhatsApp or social media.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="#contact">

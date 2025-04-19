@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Star, Zap, Shield, Users, BarChart, Layers } from "lucide-react";
+import { Star, Zap, Shield, Users, BarChart, Layers, Puzzle, MessageCircleHeart, TabletSmartphone, Palette, Link, BadgeX } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 const FeaturesSection = () => {
@@ -21,40 +21,40 @@ const FeaturesSection = () => {
 
   const features = [
     {
-      title: "Smart Automation",
+      title: "Custom Showcase Website",
       description:
-        "Automate repetitive tasks and workflows to save time and reduce errors.",
-      icon: <Zap className="size-5 text-success" />,
+        "Highlight your products in a clean, modern layout that reflects your brand.",
+      icon: <Puzzle className="size-5 text-success" />,
     },
     {
-      title: "Advanced Analytics",
+      title: "WhatsApp Order Button",
       description:
-        "Gain valuable insights with real-time data visualization and reporting.",
-      icon: <BarChart className="size-5 text-success" />,
+        "Let customers order instantly with a pre-filled WhatsApp message for each product.",
+      icon: <MessageCircleHeart className="size-5 text-success" />,
     },
     {
-      title: "Team Collaboration",
+      title: "Mobile-First Design",
       description:
-        "Work together seamlessly with integrated communication tools.",
-      icon: <Users className="size-5 text-success" />,
+        "Looks great on any device — optimized for the phones your customers are using.",
+      icon: <TabletSmartphone className="size-5 text-success" />,
     },
     {
-      title: "Enterprise Security",
+      title: "Personalized Style",
       description:
-        "Keep your data safe with end-to-end encryption and compliance features.",
-      icon: <Shield className="size-5 text-success" />,
+        "Colors, fonts, and layout that match your shop’s vibe — not a generic template.",
+      icon: <Palette className="size-5 text-success" />,
     },
     {
-      title: "Seamless Integration",
+      title: "Link-Friendly and Shareable",
       description:
-        "Connect with your favorite tools through our extensive API ecosystem.",
-      icon: <Layers className="size-5 text-success" />,
+        "Share your site on social media, business cards, or even with a QR code.",
+      icon: <Link className="size-5 text-success" />,
     },
     {
-      title: "24/7 Support",
+      title: "No Hosting or Monthly Fees",
       description:
-        "Get help whenever you need it with our dedicated support team.",
-      icon: <Star className="size-5 text-success" />,
+        "One-time setup. Static site. No servers. No surprises.",
+      icon: <BadgeX className="size-5 text-success" />,
     },
   ];
   return (
