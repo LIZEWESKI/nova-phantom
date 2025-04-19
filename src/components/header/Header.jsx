@@ -8,6 +8,7 @@ import GlowingButton from "../ui/GlowingButton";
 import AppLogo from "../AppLogo";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { useTranslation } from "react-i18next"
+import { ModeToggle } from "../ModeToggle";
 
 export default function Header() {
   const { t } = useTranslation()
@@ -64,7 +65,7 @@ export default function Header() {
         </nav>
         <div className="hidden md:flex gap-4 items-center">
           <LanguageSwitcher />
-          <Button
+          {/* <Button
             variant="ghost"
             size="icon"
             onClick={toggleTheme}
@@ -76,7 +77,8 @@ export default function Header() {
               <Moon className="size-[18px]" />
             )}
             <span className="sr-only">Toggle theme</span>
-          </Button>
+          </Button> */}
+          <ModeToggle />
           <a href="#contact">
             <GlowingButton text={t("nav.getStarted")} />
           </a>

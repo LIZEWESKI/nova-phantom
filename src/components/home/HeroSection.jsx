@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import { useTranslation } from "react-i18next";
 export const HeroSection = () => {
+  const { t } = useTranslation();
+  const translate = document.documentElement.lang === 'ar' ?  "flex-row-reverse" : '';
+  
   return (
     <section className="w-full py-20 md:py-32 lg:py-30 overflow-hidden">
       <div className="container w-full px-4 md:px-6 relative">
@@ -15,10 +18,10 @@ export const HeroSection = () => {
           className="text-center w-full max-w-3xl mx-auto mb-12"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mt-12 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
-          Give Your Shop a Digital Front Door with Nova Phantom
+            {t("hero.title")}
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Create a clean, modern website for your store — no backend, no monthly hosting. Let your customers browse your products and order directly through WhatsApp or social media.
+            {t("hero.description")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="#contact">
@@ -27,9 +30,11 @@ export const HeroSection = () => {
                 variant="default"
                 className="relative rounded-full h-12 px-8 text-base"
               >
-                <span className="relative z-20 flex items-center transition-transform duration-300 group-hover:scale-110">
-                  Get to know us!
-                  <ArrowRight className="ml-2 size-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:rotate-12" />
+                <span 
+                className={`relative z-20 flex items-center transition-transform duration-300 group-hover:scale-110 ${translate}`}
+                >
+                  {t("hero.GetToKnow")}
+                  <span>  <ArrowRight className="ml-2 size-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:rotate-12" /></span>
                 </span>
               </Button>
             </a>
@@ -39,7 +44,7 @@ export const HeroSection = () => {
                 variant="outline"
                 className="rounded-full h-12 px-8 text-base"
               >
-                Our Features
+                {t("hero.ourFeatures")}
               </Button>
             </a>
           </div>

@@ -8,5 +8,11 @@
     "faq": "FAQ",
     "getStarted": "Commencer"
   },
-  "language": "Langue"
+  "language": "Langue",
+  "hero": {
+    "title": "Offrez à votre boutique une vitrine numérique avec Nova Phantom",
+    "description": "Créez un site web moderne et épuré pour votre magasin - sans backend, sans hébergement mensuel. Laissez vos clients parcourir vos produits et commander directement via WhatsApp ou les réseaux sociaux.",
+    "GetToKnow": "Faites connaissance avec nous !",
+    "ourFeatures": "Nos fonctionnalités"
+  }
 }
