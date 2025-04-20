@@ -14,5 +14,35 @@
     "description": "Create a clean, modern website for your store — no backend, no monthly hosting. Let your customers browse your products and order directly through WhatsApp or social media.",
     "GetToKnow": "Get to know us!",
     "ourFeatures": "Our Features"
+  },
+  "features": {
+    "title": "Features",
+    "description": "Our comprehensive platform provides all the tools you need to streamline your workflow, boost productivity, and achieve your goals.",
+    "cards": [
+      {
+        "title": "Custom Showcase Website",
+        "description": "Highlight your products in a clean, modern layout that reflects your brand."
+      },
+      {
+        "title": "WhatsApp Order Button",
+        "description": "Let customers order instantly with a pre-filled WhatsApp message for each product."
+      },
+      {
+        "title": "Mobile-First Design",
+        "description": "Looks great on any device — optimized for the phones your customers are using."
+      },
+      {
+        "title": "Personalized Style",
+        "description": "Colors, fonts, and layout that match your shop’s vibe — not a generic template."
+      },
+      {
+        "title": "Link-Friendly and Shareable",
+        "description": "Share your site on social media, business cards, or even with a QR code."
+      },
+      {
+        "title": "No Hosting or Monthly Fees",
+        "description": "One-time setup. Static site. No servers. No surprises."
+      }
+    ]
   }
 }

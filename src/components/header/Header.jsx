@@ -7,11 +7,11 @@ import { useTheme } from "@/components/ThemeProvider";
 import GlowingButton from "../ui/GlowingButton";
 import AppLogo from "../AppLogo";
 import LanguageSwitcher from "../LanguageSwitcher";
-import { useTranslation } from "react-i18next"
+import { useTranslation } from "react-i18next";
 import { ModeToggle } from "../ModeToggle";
 
 export default function Header() {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
@@ -40,7 +40,7 @@ export default function Header() {
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
-
+  
   return (
     <header
       className={`fixed top-0 left-0 flex justify-center z-50 border-b-[1px] px-6 md:px-20 py-2 w-full backdrop-blur-lg transition-all duration-300 ${
@@ -65,19 +65,7 @@ export default function Header() {
         </nav>
         <div className="hidden md:flex gap-4 items-center">
           <LanguageSwitcher />
-          {/* <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleTheme}
-            className="rounded-full"
-          >
-            {mounted && theme === "dark" ? (
-              <Sun className="size-[18px]" />
-            ) : (
-              <Moon className="size-[18px]" />
-            )}
-            <span className="sr-only">Toggle theme</span>
-          </Button> */}
+
           <ModeToggle />
           <a href="#contact">
             <GlowingButton text={t("nav.getStarted")} />

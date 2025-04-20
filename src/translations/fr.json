@@ -14,5 +14,35 @@
     "description": "Créez un site web moderne et épuré pour votre magasin - sans backend, sans hébergement mensuel. Laissez vos clients parcourir vos produits et commander directement via WhatsApp ou les réseaux sociaux.",
     "GetToKnow": "Faites connaissance avec nous !",
     "ourFeatures": "Nos fonctionnalités"
-  }
+  },
+  "features": {
+  "title": "Fonctionnalités",
+  "description": "Notre plateforme complète vous offre tous les outils nécessaires pour optimiser votre flux de travail, augmenter votre productivité et atteindre vos objectifs.",
+  "cards": [
+    {
+      "title": "Site vitrine personnalisé",
+      "description": "Mettez en valeur vos produits dans un design propre et moderne qui reflète votre marque."
+    },
+    {
+      "title": "Bouton de commande WhatsApp",
+      "description": "Permettez à vos clients de commander instantanément avec un message WhatsApp pré-rempli pour chaque produit."
+    },
+    {
+      "title": "Design mobile-first",
+      "description": "Parfait sur tous les appareils — optimisé pour les téléphones utilisés par vos clients."
+    },
+    {
+      "title": "Style personnalisé",
+      "description": "Couleurs, polices et mise en page qui correspondent à l’ambiance de votre boutique — loin des modèles standards."
+    },
+    {
+      "title": "Facile à partager",
+      "description": "Partagez votre site sur les réseaux sociaux, cartes de visite ou avec un QR code."
+    },
+    {
+      "title": "Sans hébergement ni frais mensuels",
+      "description": "Configuration unique. Site statique. Sans serveur. Sans mauvaise surprise."
+    }
+  ]
+}
 }

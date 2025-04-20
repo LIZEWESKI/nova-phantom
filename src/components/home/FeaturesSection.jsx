@@ -1,9 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Star, Zap, Shield, Users, BarChart, Layers, Puzzle, MessageCircleHeart, TabletSmartphone, Palette, Link, BadgeX } from "lucide-react";
+import { Puzzle, MessageCircleHeart, TabletSmartphone, Palette, Link, BadgeX } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslation } from "react-i18next"
+
 const FeaturesSection = () => {
+  const { t } = useTranslation()
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -21,39 +24,33 @@ const FeaturesSection = () => {
 
   const features = [
     {
-      title: "Custom Showcase Website",
-      description:
-        "Highlight your products in a clean, modern layout that reflects your brand.",
+      title: t("features.cards.0.title"),
+      description: t("features.cards.0.description"),
       icon: <Puzzle className="size-5 text-success" />,
     },
     {
-      title: "WhatsApp Order Button",
-      description:
-        "Let customers order instantly with a pre-filled WhatsApp message for each product.",
+      title: t("features.cards.1.title"),
+      description: t("features.cards.1.description"),
       icon: <MessageCircleHeart className="size-5 text-success" />,
     },
     {
-      title: "Mobile-First Design",
-      description:
-        "Looks great on any device — optimized for the phones your customers are using.",
+      title: t("features.cards.2.title"),
+      description: t("features.cards.2.description"),
       icon: <TabletSmartphone className="size-5 text-success" />,
     },
     {
-      title: "Personalized Style",
-      description:
-        "Colors, fonts, and layout that match your shop’s vibe — not a generic template.",
+      title: t("features.cards.3.title"),
+      description: t("features.cards.3.description"),
       icon: <Palette className="size-5 text-success" />,
     },
     {
-      title: "Link-Friendly and Shareable",
-      description:
-        "Share your site on social media, business cards, or even with a QR code.",
+      title: t("features.cards.4.title"),
+      description: t("features.cards.4.description"),
       icon: <Link className="size-5 text-success" />,
     },
     {
-      title: "No Hosting or Monthly Fees",
-      description:
-        "One-time setup. Static site. No servers. No surprises.",
+      title: t("features.cards.5.title"),
+      description: t("features.cards.5.description"),
       icon: <BadgeX className="size-5 text-success" />,
     },
   ];
@@ -74,12 +71,10 @@ const FeaturesSection = () => {
             Features
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-            Everything You Need to Succeed
+          {t("features.title")}
           </h2>
           <p className="max-w-[800px] text-muted-foreground md:text-lg">
-            Our comprehensive platform provides all the tools you need to
-            streamline your workflow, boost productivity, and achieve your
-            goals.
+          {t("features.description")}
           </p>
         </motion.div>
 
