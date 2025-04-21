@@ -34,9 +34,6 @@ export default function CTASection() {
               </Button>
             </a>
           </div>
-          <p className="text-sm text-primary-foreground/80 mt-4">
-            No credit card required.
-          </p>
         </motion.div>
       </div>
     </section>

@@ -10,16 +10,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 export function LanguageSwitcher() {
-  const [currentLanguage, setCurrentLanguage] = useState(localStorage.getItem("current-lang") || "en" );
-  useEffect(()=> {
-    
-  },[])
-  const getLanguage = (language) => {
-    setCurrentLanguage(language);
-    localStorage.setItem("current-lang",language);
-    i18n.changeLanguage(currentLanguage)
-  }
-  console.log(localStorage.getItem("current-lang"),currentLanguage)
+
+  const changeLanguage = (lng) => i18n.changeLanguage(lng);
   // Language options with their native names
   const languages = [
     { code: "en", name: "English" },
@@ -38,7 +30,7 @@ export function LanguageSwitcher() {
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
-            onClick={() => getLanguage(lang.code)}
+            onClick={() => changeLanguage(lang.code)}
             className='cursor-pointer'
           >
             {lang.name}
