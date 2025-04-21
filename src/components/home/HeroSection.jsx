@@ -95,7 +95,7 @@ export const HeroSection = () => {
             }}
             className="flex-1 relative w-full max-w-2xl mx-auto mt-8 lg:mt-0"
           >
-            <div className="rounded-xl overflow-hidden shadow-2xl border border-border/40 bg-gradient-to-b from-background to-muted/20 transition-all duration-500 hover:shadow-lg hover:shadow-primary/10">
+            <div className="overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-lg hover:shadow-primary/10">
               <img
                 src={templatePreview || "/placeholder.svg"}
                 width={1280}
@@ -103,26 +103,12 @@ export const HeroSection = () => {
                 alt="SaaSify dashboard"
                 className="w-full h-auto"
               />
-
-              <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-black/10 dark:ring-white/10"></div>
             </div>
 
             {/* Background blobs */}
             <div className="absolute -bottom-6 -right-6 -z-10 h-[200px] w-[200px] md:h-[300px] md:w-[300px] rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 blur-3xl opacity-70"></div>
             <div className="absolute -top-6 -left-6 -z-10 h-[200px] w-[200px] md:h-[300px] md:w-[300px] rounded-full bg-gradient-to-br from-secondary/30 to-primary/30 blur-3xl opacity-70"></div>
 
-            {/* Floating elements for visual interest */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.5 }}
-              className="absolute -top-4 -right-4 md:-top-8 md:-right-8 bg-background rounded-lg p-3 shadow-lg border border-border/50"
-            >
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                <span className="text-sm font-medium">100% {isRTL ? "متوافق" : "Compatible"}</span>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </div>
