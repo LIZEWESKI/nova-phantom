@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Globe } from "lucide-react";
 import { i18n } from "./i18n-provider"; // Import the i18n instance directly
@@ -10,7 +10,16 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 export function LanguageSwitcher() {
-  const changeLanguage = (lng) => i18n.changeLanguage(lng);
+  const [currentLanguage, setCurrentLanguage] = useState(localStorage.getItem("current-lang") || "en" );
+  useEffect(()=> {
+    
+  },[])
+  const getLanguage = (language) => {
+    setCurrentLanguage(language);
+    localStorage.setItem("current-lang",language);
+    i18n.changeLanguage(currentLanguage)
+  }
+  console.log(localStorage.getItem("current-lang"),currentLanguage)
   // Language options with their native names
   const languages = [
     { code: "en", name: "English" },
@@ -29,7 +38,7 @@ export function LanguageSwitcher() {
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
-            onClick={() => changeLanguage(lang.code)}
+            onClick={() => getLanguage(lang.code)}
             className='cursor-pointer'
           >
             {lang.name}
