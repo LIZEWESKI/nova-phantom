@@ -7,11 +7,11 @@ import { useTheme } from "@/components/ThemeProvider";
 import GlowingButton from "../ui/GlowingButton";
 import AppLogo from "../AppLogo";
 import LanguageSwitcher from "../LanguageSwitcher";
-import { useTranslation } from "react-i18next"
+import { useTranslation } from "react-i18next";
 import { ModeToggle } from "../ModeToggle";
 
 export default function Header() {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
@@ -65,37 +65,14 @@ export default function Header() {
         </nav>
         <div className="hidden md:flex gap-4 items-center">
           <LanguageSwitcher />
-          {/* <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleTheme}
-            className="rounded-full"
-          >
-            {mounted && theme === "dark" ? (
-              <Sun className="size-[18px]" />
-            ) : (
-              <Moon className="size-[18px]" />
-            )}
-            <span className="sr-only">Toggle theme</span>
-          </Button> */}
           <ModeToggle />
           <a href="#contact">
             <GlowingButton text={t("nav.getStarted")} />
           </a>
         </div>
         <div className="flex items-center gap-4 md:hidden">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleTheme}
-            className="rounded-full"
-          >
-            {mounted && theme === "dark" ? (
-              <Sun className="size-[18px]" />
-            ) : (
-              <Moon className="size-[18px]" />
-            )}
-          </Button>
+          <LanguageSwitcher />
+          <ModeToggle />
           <Button
             variant="ghost"
             size="icon"
@@ -129,6 +106,7 @@ export default function Header() {
                 {link.name}
               </a>
             ))}
+
             <div className="flex flex-col gap-2 pt-2 border-t">
               <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
                 <GlowingButton text={t("nav.getStarted")} />
