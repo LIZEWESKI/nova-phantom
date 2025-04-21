@@ -44,5 +44,146 @@
         "description": "One-time setup. Static site. No servers. No surprises."
       }
     ]
+  },
+  "works": {
+    "section": "How It Works",
+    "title": "Simple Process, Beautiful Results",
+    "description": "Getting your retail business online is easy with our simple three-step process.",
+    "steps": [
+      {
+        "title": "Choose Your Plan",
+        "description": "Pick the package that fits your needs — Basic, Standard, or Premium. Each one includes a quick WhatsApp link to get started instantly."
+      },
+      {
+        "title": "Send Us Your Brand & Product Info",
+        "description": "Share your brand name, the type of website you want, and the products you'd like to showcase — we’ll take care of the rest."
+      },
+      {
+        "title": "Pay & Go Live",
+        "description": "Once everything’s ready, you’ll receive a preview of your site. Approve, pay, and your new storefront is live and ready to share."
+      }
+    ]
+  },
+  "testimonials": {
+    "section": "Testimonials",
+    "title": "Loved by Local Businesses",
+    "description": "Don't just take our word for it. See what our clients have to say about their websites.",
+    "cards": [
+      {
+        "author": "Lisa Patel",
+        "role": "Owner, Step Forward Footwear",
+        "text": "The free maintenance has been a lifesaver. I can focus on running my shoe store while they keep my website updated and running smoothly.",
+        "rating": 5,
+        "image": "https://i.pravatar.cc/100?img=38"
+      },
+      {
+        "author": "Michael Chen",
+        "role": "Founder, Urban Style Clothing",
+        "text": "The website they built for my clothing boutique perfectly captures our brand. The mobile shopping experience is fantastic and our customers love it.",
+        "rating": 4,
+        "image": "https://i.pravatar.cc/100?img=52"
+      },
+      {
+        "author": "Sarah Johnson",
+        "role": "Owner, Elegant Gems Jewelry",
+        "text": "They created exactly the website I wanted for my jewelry store. My online sales have increased by 40% since launching the new site!",
+        "rating": 5,
+        "image": "https://i.pravatar.cc/100?img=49"
+      }
+    ]
+  },
+  "faq": {
+    "section": "FAQ",
+    "title": "Frequently Asked Questions",
+    "description": "Find answers to common questions about our platform.",
+    "questions": [
+      {
+        "question": "Do I need any technical skills to get started?",
+        "answer":
+          "Not at all! Just pick your plan, send your info via WhatsApp, and we’ll handle everything — from design to delivery."
+      },
+      {
+        "question": "Where will my website be hosted?",
+        "answer":
+          "Your website will be hosted for free using modern static hosting platforms. No need to pay monthly hosting fees."
+      },
+      {
+        "question": "How will customers place orders?",
+        "answer":
+          "Each product will have a button that redirects to your WhatsApp with a pre-filled message — simple, fast, and personal."
+      },
+      {
+        "question":
+          "Can I update my products later?",
+        "answer":
+          "Yes! Just message us on WhatsApp with the new details — we'll handle the updates based on your plan."
+      },
+      {
+        "question": "How long does it take to build the website?",
+        "answer":
+          "Usually between 2 to 4 days, depending on your plan and how quickly you send the required info."
+      },
+      {
+        "question": "What’s included in each plan?",
+        "answer":
+          "Each plan includes different features, like the number of products, design customization, and update frequency. You’ll see full details when you choose a plan."
+      }
+    ]
+  },
+  "pricing": {
+    "section": "Pricing",
+    "title": "Choose Your Plan",
+    "description": "Select the package that best fits your needs. All plans include a free WhatsApp link for easy customer communication.",
+    "plans": [
+      {
+        "author": "Basic",
+        "price": "$99",
+        "currency": "MAD",
+        "features": [
+          "Custom Showcase Website",
+          "WhatsApp Order Button",
+          "Mobile-First Design"
+        ]
+      },
+      {
+        "name": "Standard",
+        "price": "$199",
+        "features": [
+          "All Basic Features",
+          "Personalized Style",
+          "Link-Friendly and Shareable"
+        ]
+      },
+      {
+        "name": "Premium",
+        "price": "$299",
+        "features": [
+          "All Standard Features",
+          "No Hosting or Monthly Fees",
+          "Ongoing Support & Maintenance"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "section": "Contact Us",
+    "title": "Get in Touch",
+    "description": "Have questions or ready to get started? Reach out to us today!",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "submit": "Send Message"
+    }
+  },
+  "footer": {
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "contact": "Contact Us",
+    "social": {
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "instagram": "Instagram"
+    }
   }
 }

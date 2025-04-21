@@ -2,34 +2,10 @@ import { motion } from "framer-motion"
 import { Star, Quote } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
-
+import { useTranslation } from "react-i18next";
 export default function TestimonialsSection() {
-  const testimonials = [
-    {
-      quote:
-        "They created exactly the website I wanted for my jewelry store. My online sales have increased by 40% since launching the new site!",
-      author: "Sarah Johnson",
-      role: "Owner, Elegant Gems Jewelry",
-      rating: 5,
-      image: "https://i.pravatar.cc/100?img=38",
-    },
-    {
-      quote:
-        "The website they built for my clothing boutique perfectly captures our brand. The mobile shopping experience is fantastic and our customers love it.",
-      author: "Michael Chen",
-      role: "Founder, Urban Style Clothing",
-      rating: 4, 
-      image: "https://i.pravatar.cc/100?img=52",
-    },
-    {
-      quote:
-        "The free maintenance has been a lifesaver. I can focus on running my shoe store while they keep my website updated and running smoothly.",
-      author: "Lisa Patel",
-      role: "Owner, Step Forward Footwear",
-      rating: 5,
-      image: "https://i.pravatar.cc/100?img=49",
-    },
-  ]
+    const { t } = useTranslation();
+    const testimonials = t("testimonials.cards", { returnObjects: true });
 
   return (
     <section id="testimonials" className="w-full py-12 md:py-20 relative overflow-hidden">
@@ -48,12 +24,10 @@ export default function TestimonialsSection() {
           className="flex flex-col items-center justify-center space-y-4 text-center mb-12"
         >
           <Badge className="rounded-full px-4 py-1.5 text-sm font-medium" variant="secondary">
-            Testimonials
+            {t("testimonials.section")}
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Loved by Local Businesses</h2>
-          <p className="max-w-[800px] text-muted-foreground md:text-lg">
-            Don't just take our word for it. See what our clients have to say about their websites.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t("testimonials.title")}</h2>
+          <p className="max-w-[800px] text-muted-foreground md:text-lg">{t("testimonials.description")}</p>
         </motion.div>
 
         <div className="grid gap-8 md:grid-cols-3">
@@ -86,7 +60,7 @@ export default function TestimonialsSection() {
                   </div>
 
                   {/* Quote text */}
-                  <p className="text-lg mb-8 flex-grow italic">{testimonial.quote}</p>
+                  <p className="text-lg mb-8 flex-grow italic">{testimonial.text}</p>
 
                   {/* Author info */}
                   <div className="flex items-center gap-4 mt-auto pt-4 border-t border-border/40">

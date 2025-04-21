@@ -41,6 +41,7 @@ export default function ContactSection() {
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormState({ name: "", email: "", message: "" });
+      // sendToWhatsApp(`${formState.name} ${formState.email} sent a message: ${formState.message}`);
 
       // Reset success message after 5 seconds
       setTimeout(() => {
@@ -48,6 +49,12 @@ export default function ContactSection() {
       }, 5000);
     }, 1500);
   };
+  function sendToWhatsApp(value) {
+    const msg = typeof value === "string" ? value : value.toString();
+    const message = encodeURIComponent(msg);
+    const phone = "2126000000";
+   window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+  } 
 
   return (
     <section
@@ -116,7 +123,8 @@ export default function ContactSection() {
                     </p>
                     <p className="text-muted-foreground flex items-center">
                       <Clock className="mr-2 size-4 text-primary" />
-                      <span>Monday - Friday, 9am - 5pm PST</span>
+                      <span>Monday - Friday, 9am - 5pm PST.</span>
+                      {/* <span className="text-sm"> Messages sent outside these hours may receive a delayed response.</span> */}
                     </p>
                   </div>
                 </div>

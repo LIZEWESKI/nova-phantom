@@ -10,11 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 export function LanguageSwitcher() {
-  const navigationLang = navigator.languages[0].slice(0, 2);
-  const systemLang = ["ar", "en", "fr"].includes(navigationLang) ? navigationLang : "en";
-
-  const changeLanguage = (lng) => i18n.changeLanguage(lng)
-
+  const changeLanguage = (lng) => i18n.changeLanguage(lng);
   // Language options with their native names
   const languages = [
     { code: "en", name: "English" },
@@ -40,12 +36,6 @@ export function LanguageSwitcher() {
           </DropdownMenuItem>
         ))}
 
-        <DropdownMenuItem 
-          onClick={() => changeLanguage(systemLang)}
-          className='cursor-pointer'
-        >
-          System
-        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

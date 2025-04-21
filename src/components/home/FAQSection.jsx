@@ -7,8 +7,12 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "../ui/accordion";
+import { useTranslation } from "react-i18next";
 
 const FAQSection = () => {
+  const { t } = useTranslation();
+  const questions = t("faq.questions", { returnObjects: true });
+
   return (
     <section id="faq" className="w-full py-12 md:py-20">
       <div className="container px-4 md:px-6">
@@ -23,50 +27,18 @@ const FAQSection = () => {
             className="rounded-full px-4 py-1.5 text-sm font-medium"
             variant="secondary"
           >
-            FAQ
+            {t("faq.section")}
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-            Frequently Asked Questions
+          {t("faq.title")}
           </h2>
           <p className="max-w-[800px] text-muted-foreground md:text-lg">
-            Find answers to common questions about our platform.
+          {t("faq.description")}
           </p>
         </motion.div>
         <div className="mx-auto max-w-3xl">
           <Accordion type="single" collapsible className="w-full">
-            {[
-              {
-                question: "Do I need any technical skills to get started?",
-                answer:
-                  "Not at all! Just pick your plan, send your info via WhatsApp, and we’ll handle everything — from design to delivery.",
-              },
-              {
-                question: "Where will my website be hosted?",
-                answer:
-                  "Your website will be hosted for free using modern static hosting platforms. No need to pay monthly hosting fees.",
-              },
-              {
-                question: "How will customers place orders?",
-                answer:
-                  "Each product will have a button that redirects to your WhatsApp with a pre-filled message — simple, fast, and personal.",
-              },
-              {
-                question:
-                  "Can I update my products later?",
-                answer:
-                  "Yes! Just message us on WhatsApp with the new details — we'll handle the updates based on your plan.",
-              },
-              {
-                question: "How long does it take to build the website?",
-                answer:
-                  "Usually between 2 to 4 days, depending on your plan and how quickly you send the required info.",
-              },
-              {
-                question: "What’s included in each plan?",
-                answer:
-                  "Each plan includes different features, like the number of products, design customization, and update frequency. You’ll see full details when you choose a plan.",
-              },
-            ].map((faq, i) => (
+            {questions.map((faq, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 10 }}

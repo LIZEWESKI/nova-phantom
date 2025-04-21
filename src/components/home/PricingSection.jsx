@@ -56,7 +56,7 @@ const PricingSection = () => {
               },
               {
                 name: "Standard",
-                price: "1799",
+                price: "2199",
                 description: "Ideal for growing businesses.",
                 features: [
                   "Deploy",
@@ -73,7 +73,7 @@ const PricingSection = () => {
               },
               {
                 name: "Premium",
-                price: "7999",
+                price: "3999",
                 description: "For large organizations with complex needs.",
                 features: [
                   "Deploy",

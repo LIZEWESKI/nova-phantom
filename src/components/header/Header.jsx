@@ -40,7 +40,7 @@ export default function Header() {
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
-  
+
   return (
     <header
       className={`fixed top-0 left-0 flex justify-center z-50 border-b-[1px] px-6 md:px-20 py-2 w-full backdrop-blur-lg transition-all duration-300 ${
@@ -65,25 +65,14 @@ export default function Header() {
         </nav>
         <div className="hidden md:flex gap-4 items-center">
           <LanguageSwitcher />
-
           <ModeToggle />
           <a href="#contact">
             <GlowingButton text={t("nav.getStarted")} />
           </a>
         </div>
         <div className="flex items-center gap-4 md:hidden">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleTheme}
-            className="rounded-full"
-          >
-            {mounted && theme === "dark" ? (
-              <Sun className="size-[18px]" />
-            ) : (
-              <Moon className="size-[18px]" />
-            )}
-          </Button>
+          <LanguageSwitcher />
+          <ModeToggle />
           <Button
             variant="ghost"
             size="icon"
@@ -117,6 +106,7 @@ export default function Header() {
                 {link.name}
               </a>
             ))}
+
             <div className="flex flex-col gap-2 pt-2 border-t">
               <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
                 <GlowingButton text={t("nav.getStarted")} />
