@@ -132,49 +132,64 @@
   },
   "pricing": {
     "section": "Pricing",
-    "title": "Choose Your Plan",
-    "description": "Select the package that best fits your needs. All plans include a free WhatsApp link for easy customer communication.",
+    "title": "Simple, Transparent Pricing",
+    "description": "Choose the package that's right for your retail business. All packages include a free domain name and maintenance for 1 year.",
     "plans": [
       {
-        "author": "Basic",
-        "price": "$99",
+        "type": "Basic",
+        "price": "799",
+        "description": "Perfect for small retail businesses just getting started online.",
         "currency": "MAD",
         "features": [
-          "Custom Showcase Website",
-          "WhatsApp Order Button",
-          "Mobile-First Design"
-        ]
+          "1-page website",
+          "Up to 10 products",
+          "Mobile-First Design",
+          "3-day delivery",
+          "Free maintenance for 1 year"
+        ],
+        "button": "Get Started"
       },
       {
-        "name": "Standard",
-        "price": "$199",
+        "type": "Business",
+        "price": "2199",
+        "description": "Ideal for growing retail businesses with more products.",
+        "currency": "MAD",
         "features": [
-          "All Basic Features",
-          "Personalized Style",
-          "Link-Friendly and Shareable"
-        ]
+          "5-page website",
+          "Up to 20 products",
+          "Mobile-First Design",
+          "3-4 day delivery",
+          "Multi-section website",
+          "Basic customization (colors, logo)",
+          "Free maintenance for 1 year",
+          "2 free edits post-delivery",
+          "1-year free domain name"
+        ],
+        "button": "Get Started"
       },
       {
-        "name": "Premium",
-        "price": "$299",
+        "type": "Premium",
+        "price": "3999",
+        "description": "For established retailers needing a comprehensive online presence.",
+        "currency": "MAD",
         "features": [
-          "All Standard Features",
-          "No Hosting or Monthly Fees",
-          "Ongoing Support & Maintenance"
-        ]
+          "Unlimited page responsive website",
+          "Advanced online store (unlimited products)",
+          "Custom design",
+          "Advanced SEO optimization",
+          "Product filtering and search",
+          "1-year free domain name",
+          "Free maintenance for 1 year",
+          "Priority support"
+        ],
+        "button": "Get Started"
       }
     ]
   },
-  "contact": {
-    "section": "Contact Us",
-    "title": "Get in Touch",
-    "description": "Have questions or ready to get started? Reach out to us today!",
-    "form": {
-      "name": "Your Name",
-      "email": "Your Email",
-      "message": "Your Message",
-      "submit": "Send Message"
-    }
+  "CTA": {
+    "title": "Ready to Transform Your Workflow?",
+    "description": "Join thousands of satisfied customers who have streamlined their processes and boosted productivity with our platform.",
+    "button": "Join us"
   },
   "footer": {
     "terms": "Terms of Service",

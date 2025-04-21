@@ -124,38 +124,64 @@
     ]
   },
   "pricing": {
-    "section": "Pricing",
-    "title": "Choose Your Plan",
-    "description": "Select the package that best fits your needs. All plans include a free WhatsApp link for easy customer communication.",
+    "section": "Tarification",
+    "title": "Tarification simple et transparente",
+    "description": "Choisissez le forfait qui convient à votre boutique. Tous les forfaits incluent un nom de domaine gratuit et une maintenance pendant 1 an.",
     "plans": [
       {
-        "author": "Basic",
-        "price": "$99",
+        "type": "Basique",
+        "price": "799",
+        "description": "Parfait pour les petites boutiques qui démarrent en ligne.",
         "currency": "MAD",
         "features": [
-          "Custom Showcase Website",
-          "WhatsApp Order Button",
-          "Mobile-First Design"
-        ]
+          "Site web d'une seule page",
+          "Jusqu'à 10 produits",
+          "Design mobile-first",
+          "Livraison en 3 jours",
+          "Maintenance gratuite pendant 1 an"
+        ],
+        "button": "Commencer"
       },
       {
-        "name": "Standard",
-        "price": "$199",
+        "type": "Business",
+        "price": "2199",
+        "description": "Idéal pour les boutiques en croissance avec plus de produits.",
+        "currency": "MAD",
         "features": [
-          "All Basic Features",
-          "Personalized Style",
-          "Link-Friendly and Shareable"
-        ]
+          "Site web de 5 pages",
+          "Jusqu'à 20 produits",
+          "Design mobile-first",
+          "Livraison en 3-4 jours",
+          "Site multi-sections",
+          "Personnalisation simple (couleurs, logo)",
+          "Maintenance gratuite pendant 1 an",
+          "2 modifications gratuites après la livraison",
+          "Nom de domaine gratuit pendant 1 an"
+        ],
+        "button": "Commencer"
       },
       {
-        "name": "Premium",
-        "price": "$299",
+        "type": "Premium",
+        "price": "3999",
+        "description": "Pour les grandes boutiques ayant besoin d'une présence web complète.",
+        "currency": "MAD",
         "features": [
-          "All Standard Features",
-          "No Hosting or Monthly Fees",
-          "Ongoing Support & Maintenance"
-        ]
+          "Site web réactif à pages illimitées",
+          "Boutique en ligne avancée (produits illimités)",
+          "Design personnalisé",
+          "Optimisation SEO avancée",
+          "Filtrage et recherche de produits",
+          "Nom de domaine gratuit pendant 1 an",
+          "Maintenance gratuite pendant 1 an",
+          "Support prioritaire"
+        ],
+        "button": "Commencer"
       }
     ]
+  },
+  "CTA": {
+    "title": "Prêt à transformer votre façon de travailler ?",
+    "description": "Rejoignez des milliers de clients satisfaits qui ont simplifié leurs processus et amélioré leur productivité grâce à notre plateforme.",
+    "button": "Rejoignez-nous"
   }
 }
