@@ -66,6 +66,8 @@ export default function TestimonialsSection() {
                   <div className="flex items-center gap-4 mt-auto pt-4 border-t border-border/40">
                     <div className="relative size-12 overflow-hidden rounded-full bg-muted">
                       <img
+                        decoding="async"
+                        loading="lazy"
                         src={testimonial.image || "/placeholder.svg"}
                         alt={testimonial.author}
                         width={48}

@@ -76,6 +76,7 @@ export default function Header() {
           <Button
             variant="ghost"
             size="icon"
+             className="bg-transparent"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? (

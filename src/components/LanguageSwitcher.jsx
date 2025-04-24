@@ -11,7 +11,11 @@ import {
 } from "@/components/ui/dropdown-menu";
 export function LanguageSwitcher() {
 
-  const changeLanguage = (lng) => i18n.changeLanguage(lng);
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    localStorage.setItem("appLanguage", lng);
+  };
+  
   // Language options with their native names
   const languages = [
     { code: "en", name: "English" },
@@ -19,10 +23,11 @@ export function LanguageSwitcher() {
     { code: "fr", name: "Français" },
   ];
 
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon" >
+        <Button variant="outline" size="icon">
           <Globe />
         </Button>
       </DropdownMenuTrigger>

@@ -20,8 +20,9 @@ const resources = {
   },
 };
 
+const savedLang = localStorage.getItem("appLanguage");
 const navigationLang = navigator.languages[0].slice(0, 2);
-const systemLang = ["ar", "en", "fr"].includes(navigationLang) ? navigationLang : "en";
+const systemLang = savedLang || (["ar", "en", "fr"].includes(navigationLang) ? navigationLang : "en");
 
 // Initialize i18next before exporting
 const i18n = i18next.createInstance();
