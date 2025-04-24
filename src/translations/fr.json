@@ -1,4 +1,5 @@
 {
+  "brand": "Nova Phantom",
   "nav": {
     "brand": "Nova Phantom",
     "home": "Accueil",
@@ -127,12 +128,14 @@
     "section": "Tarification",
     "title": "Tarification simple et transparente",
     "description": "Choisissez le forfait qui convient à votre boutique. Tous les forfaits incluent un nom de domaine gratuit et une maintenance pendant 1 an.",
-    "plans": [
+    "currency": "MAD",
+    "mostPopular": "Le plus populaire",
+    "oneTime": "Paiement unique",
+    "pricing": [
       {
         "type": "Basique",
         "price": "799",
         "description": "Parfait pour les petites boutiques qui démarrent en ligne.",
-        "currency": "MAD",
         "features": [
           "Site web d'une seule page",
           "Jusqu'à 10 produits",
@@ -146,7 +149,6 @@
         "type": "Business",
         "price": "2199",
         "description": "Idéal pour les boutiques en croissance avec plus de produits.",
-        "currency": "MAD",
         "features": [
           "Site web de 5 pages",
           "Jusqu'à 20 produits",
@@ -158,13 +160,13 @@
           "2 modifications gratuites après la livraison",
           "Nom de domaine gratuit pendant 1 an"
         ],
+        "popular": true,
         "button": "Commencer"
       },
       {
         "type": "Premium",
         "price": "3999",
         "description": "Pour les grandes boutiques ayant besoin d'une présence web complète.",
-        "currency": "MAD",
         "features": [
           "Site web réactif à pages illimitées",
           "Boutique en ligne avancée (produits illimités)",
@@ -179,9 +181,19 @@
       }
     ]
   },
-  "CTA": {
+  "cta": {
     "title": "Prêt à transformer votre façon de travailler ?",
     "description": "Rejoignez des milliers de clients satisfaits qui ont simplifié leurs processus et amélioré leur productivité grâce à notre plateforme.",
     "button": "Rejoignez-nous"
+  },
+  "footer": {
+    "description": "Simplifiez votre flux de travail avec notre plateforme SaaS tout-en-un. Améliorez votre productivité et développez votre entreprise.",
+    "product": "Produit",
+    "company": "Entreprise",
+    "about": "À propos",
+    "careers": "Carrières",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "copyright": "Tous droits réservés."
   }
 }

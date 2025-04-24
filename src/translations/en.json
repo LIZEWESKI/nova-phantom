@@ -1,4 +1,5 @@
 {
+  "brand": "Nova Phantom",
   "nav": {
     "brand": "Nova Phantom",
     "home": "Home",
@@ -99,34 +100,27 @@
     "questions": [
       {
         "question": "Do I need any technical skills to get started?",
-        "answer":
-          "Not at all! Just pick your plan, send your info via WhatsApp, and we’ll handle everything — from design to delivery."
+        "answer": "Not at all! Just pick your plan, send your info via WhatsApp, and we’ll handle everything — from design to delivery."
       },
       {
         "question": "Where will my website be hosted?",
-        "answer":
-          "Your website will be hosted for free using modern static hosting platforms. No need to pay monthly hosting fees."
+        "answer": "Your website will be hosted for free using modern static hosting platforms. No need to pay monthly hosting fees."
       },
       {
         "question": "How will customers place orders?",
-        "answer":
-          "Each product will have a button that redirects to your WhatsApp with a pre-filled message — simple, fast, and personal."
+        "answer": "Each product will have a button that redirects to your WhatsApp with a pre-filled message — simple, fast, and personal."
       },
       {
-        "question":
-          "Can I update my products later?",
-        "answer":
-          "Yes! Just message us on WhatsApp with the new details — we'll handle the updates based on your plan."
+        "question": "Can I update my products later?",
+        "answer": "Yes! Just message us on WhatsApp with the new details — we'll handle the updates based on your plan."
       },
       {
         "question": "How long does it take to build the website?",
-        "answer":
-          "Usually between 2 to 4 days, depending on your plan and how quickly you send the required info."
+        "answer": "Usually between 2 to 4 days, depending on your plan and how quickly you send the required info."
       },
       {
         "question": "What’s included in each plan?",
-        "answer":
-          "Each plan includes different features, like the number of products, design customization, and update frequency. You’ll see full details when you choose a plan."
+        "answer": "Each plan includes different features, like the number of products, design customization, and update frequency. You’ll see full details when you choose a plan."
       }
     ]
   },
@@ -134,12 +128,14 @@
     "section": "Pricing",
     "title": "Simple, Transparent Pricing",
     "description": "Choose the package that's right for your retail business. All packages include a free domain name and maintenance for 1 year.",
+    "currency": "MAD",
+    "mostPopular": "Most Popular",
+    "oneTime": "one-time",
     "plans": [
       {
         "type": "Basic",
         "price": "799",
         "description": "Perfect for small retail businesses just getting started online.",
-        "currency": "MAD",
         "features": [
           "1-page website",
           "Up to 10 products",
@@ -153,7 +149,6 @@
         "type": "Business",
         "price": "2199",
         "description": "Ideal for growing retail businesses with more products.",
-        "currency": "MAD",
         "features": [
           "5-page website",
           "Up to 20 products",
@@ -165,13 +160,13 @@
           "2 free edits post-delivery",
           "1-year free domain name"
         ],
+        "popular": true,
         "button": "Get Started"
       },
       {
         "type": "Premium",
         "price": "3999",
         "description": "For established retailers needing a comprehensive online presence.",
-        "currency": "MAD",
         "features": [
           "Unlimited page responsive website",
           "Advanced online store (unlimited products)",
@@ -186,19 +181,19 @@
       }
     ]
   },
-  "CTA": {
+  "cta": {
     "title": "Ready to Transform Your Workflow?",
     "description": "Join thousands of satisfied customers who have streamlined their processes and boosted productivity with our platform.",
     "button": "Join us"
   },
   "footer": {
-    "terms": "Terms of Service",
+    "description": "Streamline your workflow with our all-in-one SaaS platform. Boost productivity and scale your business.",
+    "product": "Product",
+    "company": "Company",
+    "about": "About",
+    "careers": "Careers",
     "privacy": "Privacy Policy",
-    "contact": "Contact Us",
-    "social": {
-      "facebook": "Facebook",
-      "twitter": "Twitter",
-      "instagram": "Instagram"
-    }
+    "terms": "Terms of Service",
+    "copyright": "All rights reserved."
   }
 }

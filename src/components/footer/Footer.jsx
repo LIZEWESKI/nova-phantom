@@ -1,8 +1,11 @@
 import {Link} from "react-router"
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
 import AppLogo from "../AppLogo"
+import { useTranslation } from "react-i18next"
 
 export default function Footer() {
+    const { t } = useTranslation()
+    const footer = (value) => t(`footer.${value}`)
   return (
     <footer className="w-full border-t flex items-center justify-center bg-background/95 backdrop-blur-sm">
       <div className="container flex flex-col gap-8 px-4 py-2 md:px-6 lg:py-6">
@@ -12,9 +15,7 @@ export default function Footer() {
                 <AppLogo/>
               <span>Nova Phantom</span>
             </div>
-            <p className="text-sm text-muted-foreground">
-              Streamline your workflow with our all-in-one SaaS platform. Boost productivity and scale your business.
-            </p>
+            <p className="text-sm text-muted-foreground">{footer("description")}</p>
             <div className="flex gap-4">
               <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
                 <Facebook className="size-5" />
@@ -27,60 +28,60 @@ export default function Footer() {
             </div>
           </div>
           <div className="space-y-4">
-            <h4 className="text-sm font-bold">Product</h4>
+            <h4 className="text-sm font-bold">{footer("product")}</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Features
-                </Link>
+                <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
+                  {t("features.title")}
+                </a>
               </li>
               <li>
-                <Link href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Pricing
-                </Link>
+                <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
+                  {t("pricing.section")}
+                </a>
               </li>
             </ul>
           </div>
           <div className="space-y-4">
-            <h4 className="text-sm font-bold">Company</h4>
+            <h4 className="text-sm font-bold">{footer("company")}</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  About
-                </Link>
+                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                {footer("about")}
+                </a>
               </li>
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Careers
-                </Link>
+                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                {footer("careers")}
+                </a>
               </li>
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Privacy Policy
-                </Link>
+                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                {footer("privacy")}
+                </a>
               </li>
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Terms of Service
-                </Link>
+                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                {footer("terms")}
+                </a>
               </li>
             </ul>
           </div>
         </div>
         <div className="flex flex-col gap-4 sm:flex-row justify-between items-center border-t border-border/90 pt-8">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} Nova Phantom. All rights reserved.
+            &copy; {new Date().getFullYear()} {t("brand")}. {footer("copyright")}
           </p>
           <div className="flex gap-4">
-            <Link href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-              Terms of Service
-            </Link>
-            <Link href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+            {footer("privacy")}
+            </a>
+            <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+            {footer("terms")}
+            </a>
+            {/* <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
               Cookie Policy
-            </Link>
+            </a> */}
           </div>
         </div>
       </div>

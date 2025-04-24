@@ -68,7 +68,7 @@ const FeaturesSection = () => {
             className="rounded-full px-4 py-1.5 text-sm font-medium"
             variant="secondary"
           >
-            Features
+            {t("features.title")}
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
           {t("features.title")}
